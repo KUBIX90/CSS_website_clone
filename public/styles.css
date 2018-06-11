@@ -30,14 +30,13 @@
 
 #nav-menu .nav-menu-content .logo {
     float: left;
-    font-size: 1rem;
+    font-size: 1.2rem;
     margin: 0;
     text-transform: uppercase;
     color: rgba(255,255,255,0.8);
 }
 
-#nav-menu .nav-menu-content nav   {float: right;}
-
+#nav-menu .nav-menu-content nav    {float: right;}
 #nav-menu .nav-menu-content nav ul {
     list-style:none;
     padding: 0;
@@ -52,15 +51,77 @@
     text-decoration: none;
     padding: .75rem 1rem .75rem 1rem;
     color: rgba(255,255,255,0.8);
-    font-size: .9rem;
+    font-size: .95rem;
     text-transform: uppercase;
+    transition: color 500ms ease;
 }
 
 /* --- Header --- */
 
 #header {
+    display: flex;
     background: linear-gradient(rgba(27,113,214,0.5),rgba(197,77,170,0.5)),
-                url("images/header.jpg") no-repeat;
+                url("images/header.jpg") center no-repeat;
     background-size: cover;
     height: 105vh;
+}
+
+.header-info {
+    position: relative;
+    left: 15%;
+    align-self:center;
+    width: 40%;
+}
+
+.header-info h3 {
+    color: rgba(255,255,255,0.5);
+    font-weight: 300;
+    font-size: 1.7rem;
+    letter-spacing: 1px;
+    margin-bottom: -3.5rem;
+}
+
+.header-info h1 {
+    color:rgba(255,255,255,0.9);
+    font-weight: 900;
+    font-size: 5rem;
+    letter-spacing: -1px;
+    text-transform: uppercase;
+}
+
+.header-info h2 {
+    color:white;
+    font-weight: 300;
+    font-size: 1.4rem;
+    font-weight: 300;
+    line-height: 1.9rem;
+    margin-top: -1.75rem;
+}
+
+.header-info .button {
+    text-transform: uppercase;
+	color: #fff;
+	background-color: #C54DAA;
+	padding: 14px 20px;
+	font-size: 15px;
+    margin-top: 2rem;
+    transition: all 0.3s;
+    border: none;
+	border-top: 4px solid #b73c9b;
+}
+
+/* MOBILE RESPONSIVENESS
+============================================================================= */
+
+@media only screen and (min-width: 480px) {
+    
+    /* Nav Menu */
+    #nav-menu .nav-menu-content nav ul li a:hover {
+        color:#cd65b5;
+    }
+
+    /* Header */
+    .header-info .button:hover {
+        background-color: #b73c9b;
+    }
 }
