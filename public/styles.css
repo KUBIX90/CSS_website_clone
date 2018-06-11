@@ -1,10 +1,14 @@
-/* SECTION STYLES
+/* BASE STYLES
 ============================================================================= */
 
 * {
     margin: 0;
     box-sizing: border-box;
     font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+}
+
+.pd-top {
+    padding-top:6rem;
 }
 
 /* SECTION STYLES
@@ -30,6 +34,7 @@
 
 #nav-menu .nav-menu-content .logo {
     float: left;
+    padding: .75rem 1rem .75rem 1rem;
     font-size: 1.2rem;
     margin: 0;
     text-transform: uppercase;
@@ -68,17 +73,18 @@
 
 .header-info {
     position: relative;
+    top: 5%;
     left: 15%;
     align-self:center;
     width: 40%;
 }
 
-.header-info h3 {
+.header-info p {
     color: rgba(255,255,255,0.5);
     font-weight: 300;
     font-size: 1.7rem;
     letter-spacing: 1px;
-    margin-bottom: -3.5rem;
+    margin-bottom: -3.25rem;
 }
 
 .header-info h1 {
@@ -108,6 +114,47 @@
     transition: all 0.3s;
     border: none;
 	border-top: 4px solid #b73c9b;
+}
+
+/* --- About Us --- */
+
+#about-us {
+    height:75vh;
+    background-color: #f6f6f6;
+}
+
+#about-us .title {
+    position: relative;
+    text-align: center;
+    color:#666;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 2.25rem;
+}
+
+#about-us .title::after {
+    content: "";
+    position:absolute;
+    top: 0px;
+    right: 2px;
+    bottom: -20px;
+    left: 0;
+    width: 75px;
+    margin: 0 auto;
+    border-bottom: 2px solid #b73c9b;
+    transition: border-bottom ease-in-out 0.5s;
+}
+
+#about-us section {
+    display: grid;
+    margin-top: 5rem;
+    grid-template-columns: repeat(1, 1fr 1fr);
+}
+
+#about-us section img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /* MOBILE RESPONSIVENESS
