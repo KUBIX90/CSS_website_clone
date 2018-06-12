@@ -119,8 +119,9 @@
 /* --- About Us --- */
 
 #about-us {
-    height:75vh;
+    height:90vh;
     background-color: #f6f6f6;
+    padding: 0 6.75rem;
 }
 
 #about-us .title {
@@ -145,17 +146,36 @@
     transition: border-bottom ease-in-out 0.5s;
 }
 
-#about-us section {
+#about-us .content {
     display: grid;
     margin-top: 5rem;
     grid-template-columns: repeat(1, 1fr 1fr);
 }
 
-#about-us section img {
+#about-us .content figure {
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
+#about-us .content article > * {
+    margin-bottom: 2rem;
+}
+
+#about-us .content article h3 {
+    color:#b73c9b;
+    font-weight: 400;
+    font-size: 1.25rem;
+}
+
+#about-us .content article p {
+    line-height: 22px;
+    font-weight:300;
+    color: #888;
+    font-size: .95rem;
+}
+
+
 
 /* MOBILE RESPONSIVENESS
 ============================================================================= */
