@@ -215,6 +215,83 @@
     text-transform: uppercase;
 }
 
+/* --- Gallery --- */
+
+#gallery {
+    padding: 0 6.75rem;
+}
+
+#gallery .btns {
+    display: flex;
+    justify-content: center;
+    margin: 2.5rem 0;  
+}
+
+#gallery .btns button {
+    margin-right: 1.5rem;
+    border:1px solid #b73c9b;
+    background-color: white;
+    transition: all 250ms ease;
+    color: #b73c9b;
+    padding: .5rem 1rem;
+    cursor: pointer;
+}
+
+#gallery .btns .btn-active {
+    color: white;
+    background: #b73c9b;
+}
+
+#gallery .imgs {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 250px));
+    grid-gap: 15px;
+    margin-bottom: 8rem;
+    justify-content: center;
+}
+
+#gallery .imgs img {
+    position: relative;
+    height: 150px;
+    width: 250px;
+    cursor: pointer;
+    transition:all 500ms ease;
+}
+
+#gallery article {
+    background-size: cover;
+    position: relative;
+    padding: 0;
+    transition: all 500ms ease;
+}
+
+#gallery article .img-overlay {
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.66);
+    opacity: 0;
+    width:100%;
+    height:100%;
+    transition: all 500ms ease;
+}
+
+#gallery article .img-overlay a {
+    display: flex;
+	position:relative;
+	height:100%;
+	width:100%;
+	display:block;
+    text-decoration:none;
+    color: white;
+    text-align: center;
+    transition: all 500ms ease;
+}
+
+#gallery article .img-overlay a p {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
 
 /* MOBILE RESPONSIVENESS
 ============================================================================= */
@@ -230,4 +307,20 @@
     .header-info .button:hover {
         background-color: #b73c9b;
     }
+
+    /* Gallery */
+    #gallery .btns button:hover {
+        color: white;
+        background: #b73c9b;
+    }
+
+    #gallery article:hover {
+        transform: scale(1.1);
+    }
+
+    #gallery article .img-overlay:hover {
+        opacity: 1;
+    }
+
+
 }
