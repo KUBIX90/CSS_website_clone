@@ -246,11 +246,13 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(100px, 250px));
     grid-gap: 15px;
-    margin-bottom: 8rem;
+    padding-bottom: 8rem;
     justify-content: center;
 }
 
-#gallery .imgs img {
+#gallery .imgs article {
+    background-size: cover;
+    padding: 0;
     position: relative;
     height: 150px;
     width: 250px;
@@ -258,14 +260,7 @@
     transition:all 500ms ease;
 }
 
-#gallery article {
-    background-size: cover;
-    position: relative;
-    padding: 0;
-    transition: all 500ms ease;
-}
-
-#gallery article .img-overlay {
+#gallery .imgs article .img-overlay {
     position: relative;
     background-color: rgba(0, 0, 0, 0.66);
     opacity: 0;
