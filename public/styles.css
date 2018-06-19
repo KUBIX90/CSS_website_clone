@@ -287,6 +287,69 @@
     transform: translateY(-50%);
 }
 
+/* --- Parallax --- */
+
+#parallax {
+    background: linear-gradient(rgba(27,113,214,0.5),rgba(197,77,170,0.5)),
+    url("images/parallax.jpg") center no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 60vh;
+    color: white;
+}
+
+#parallax .txt-white {
+    color: white;
+}
+
+#parallax .info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 300px));
+    justify-content: center;
+}
+
+#parallax .info article {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+#parallax .info article h3 {
+    color: white;
+    font-size: 2.5rem;
+    font-weight: 400;
+    margin-bottom: .5rem;
+}
+
+#parallax .info article p {
+    text-transform: uppercase;
+}
+
+/* --- Testimonials --- */
+
+#testimonials {
+    height: 95vh;
+}
+
+#testimonials .profile {
+    margin-top: 5rem;
+    text-align: center;
+}
+
+#testimonials .profile section {
+    display: flex;
+    justify-content: center;
+}
+
+#testimonials .profile section div {
+    width: 20px;
+    height: 7px;
+    margin-right: .5rem;
+    border: 1px solid #888;
+    transition: all 500ms ease;
+    cursor: pointer;
+}
 
 /* MOBILE RESPONSIVENESS
 ============================================================================= */
@@ -317,5 +380,8 @@
         opacity: 1;
     }
 
-
+    #testimonials .profile section div:hover {
+        background-color: #b73c9b;
+        border: solid 1px #b73c9b;
+    }
 }
