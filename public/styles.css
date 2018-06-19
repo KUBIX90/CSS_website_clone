@@ -333,13 +333,29 @@
 }
 
 #testimonials .profile {
-    margin-top: 5rem;
+    margin: 6rem 18rem 0 18rem;
     text-align: center;
 }
 
 #testimonials .profile section {
     display: flex;
     justify-content: center;
+}
+
+#testimonials .profile p {
+    margin-bottom: 1.5rem;
+    color: #666;
+}
+
+#testimonials .profile p span {
+    font-weight: bold;
+}
+
+#testimonials .profile img {
+    border-radius: 50%;
+    height: 120px;
+    width: 120px;
+    margin-bottom: 1.5rem;
 }
 
 #testimonials .profile section div {
