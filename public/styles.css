@@ -360,26 +360,48 @@
     cursor: pointer;
 }
 
-/* --- Get In Touch --- */
+/* --- Contact--- */
 
-#get-in-touch {
+#contact {
     height: 95vh;
 }
 
-#get-in-touch form {
+#contact form {
     display: grid;
-    margin-top: 6rem;
+    margin:6rem 8rem 0 8rem;
     justify-content: center;
-    grid-template-columns: 350px 350px;
-    grid-template-rows: 30px 125px;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 350px));
     grid-gap: 15px 25px;
 }
 
-#get-in-touch form .message {
-    grid-column: 1 /-1;
+#contact form input {
+    height: 35px;
 }
 
-#get-in-touch form input:focus {
+#contact form .message {
+    grid-column: 1 /-1;
+    padding-top: .5rem;
+    height: 125px;
+}
+
+#contact form input,
+#contact form textarea {
+    border: 1px solid #ccc;
+    padding-left: 10px;
+    color: #222;
+    font-size: .85rem;
+    font-weight: 300;
+}
+
+#contact form input::placeholder,
+#contact form textarea::placeholder {
+    color: #222;
+    font-size: .85rem;
+    font-weight: 300;
+}
+
+#contact form input:focus,
+#contact form textarea:focus {
     border: solid 1px #C54DAA;
     outline: 0;
 }
@@ -418,4 +440,7 @@
         background-color: #b73c9b;
         border: solid 1px #b73c9b;
     }
+
+    /* Contact */
+
 }
