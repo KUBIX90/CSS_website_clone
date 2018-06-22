@@ -7,6 +7,11 @@
     font-family: 'Open Sans', Arial, Helvetica, sans-serif;
 }
 
+#container  {overflow: hidden;}
+
+#menu-icon  {display: block;}
+
+
 .pd-top             {padding-top:6rem;}
 .bg-off-white       {background-color: #f6f6f6;}
 
@@ -35,7 +40,6 @@
 }
 
 #nav-menu .nav-menu-content {
-    margin: 0 6.75rem;
     position: relative;
     top: 25%;
     transform: translateY(-50%);
@@ -120,7 +124,7 @@
 	padding: 14px 20px;
 	font-size: 15px;
     margin-top: 2rem;
-    transition: all 0.3s;
+    transition: all 500ms;
     border: none;
 	border-top: 4px solid #b73c9b;
 }
@@ -129,7 +133,6 @@
 
 #about-us {
     height:90vh;
-    padding: 0 6.75rem;
 }
 
 .style .title {
@@ -157,7 +160,7 @@
 .style .content {
     display: grid;
     margin-top: 5rem;
-    grid-template-columns: repeat(auto-fit, minmax(460px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 
 .style .content figure {
@@ -180,7 +183,6 @@
 
 #our-services {
     height: 90vh;
-    padding: 0 6.75rem;
 }
 
 #our-services section {
@@ -209,10 +211,6 @@
 }
 
 /* --- Gallery --- */
-
-#gallery {
-    padding: 0 6.75rem;
-}
 
 #gallery .btns {
     display: flex;
@@ -326,7 +324,6 @@
 }
 
 #testimonials .profile {
-    margin: 6rem 18rem 0 18rem;
     text-align: center;
 }
 
@@ -370,7 +367,6 @@
 
 #contact form {
     display: grid;
-    margin:6rem 8rem 0 8rem;
     justify-content: center;
     grid-template-columns: repeat(auto-fill, minmax(200px, 350px));
     grid-gap: 15px 25px;
@@ -422,7 +418,7 @@
 }
 
 #contact .media-icons ion-icon {
-    font-size: 2.5rem;
+    font-size: 2.25rem;
     margin: 0 auto;
     cursor: pointer;
     transition: color 500ms ease;
@@ -453,7 +449,7 @@ footer {
     }
 
     /* Header */
-    .header-info .button:hover {
+    .style .btn:hover {
         background-color: #b73c9b;
     }
 
@@ -481,4 +477,64 @@ footer {
     #contact .media-icons ion-icon:hover {
         color: #666;
     }
+}
+
+@media only screen and (max-width: 480px) {
+
+    #menu-icon {
+        display:block;
+        position: fixed;
+        background:transparent;
+        padding: 10px;
+        right: 5px;
+    }
+
+    #menu-icon > div {
+        height:2px;
+        width:25px;
+        background-color: white;
+        margin:8px 0;
+    }
+    
+        /* Nav Menu */
+
+        #nav-menu   {height: 0;}
+
+        #nav-menu .nav-menu-content nav         {float: left; width: 85%;}
+        #nav-menu .nav-menu-content nav ul      {margin-top:2rem;}
+        #nav-menu .nav-menu-content nav ul li   {float: none;}
+        #nav-menu .nav-menu-content .logo       {display: none;}
+
+        /* Header */
+
+        .header-info    {width: 80%;}
+        .header-info h1 {font-size: 3rem;}
+        .header-info p  {margin-bottom: -1.5rem;}
+
+        /* About Us */
+
+        #about-us {height:auto;}
+
+        .style .content figure img {
+            height: 150px;
+        }
+
+        /* Our Services */
+
+        #our-services {
+            height:auto;
+        }
+        #parallax {
+            height: auto;
+        }
+
+
+        /* Gallery */
+
+    
+        /* Testimonials */
+
+    
+        /* Contact */
+
 }
