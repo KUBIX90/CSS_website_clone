@@ -17,6 +17,8 @@
 
 
 .pd-top             {padding-top:6rem;}
+.pd-side            {padding: 0 6rem;}
+
 .bg-off-white       {background-color: #f6f6f6;}
 
 .icon-pnk           {color: #b73c9b;}
@@ -223,7 +225,7 @@
 }
 
 #gallery .btns button {
-    margin-right: 1.5rem;
+    margin: .75rem;
     border:1px solid #b73c9b;
     background-color: white;
     transition: all 250ms ease;
@@ -329,11 +331,8 @@
 
 #testimonials .profile {
     text-align: center;
-}
-
-#testimonials .profile section {
-    display: flex;
-    justify-content: center;
+    margin: 3.5rem auto 0 auto;
+    max-width: 800px;
 }
 
 #testimonials .profile p {
@@ -350,6 +349,11 @@
     height: 120px;
     width: 120px;
     margin-bottom: 1.5rem;
+}
+
+#testimonials .profile section {
+    display: flex;
+    justify-content: center;
 }
 
 #testimonials .profile section div {
@@ -374,6 +378,7 @@
     justify-content: center;
     grid-template-columns: repeat(auto-fill, minmax(200px, 350px));
     grid-gap: 15px 25px;
+    margin: 3.5rem 0 2rem 0;
 }
 
 #contact form input {
@@ -499,6 +504,8 @@ footer {
         background-color: white;
         margin:8px 0;
     }
+
+    .pd-side    {padding: 0;}
     
     /* Nav Menu */
 
@@ -541,13 +548,8 @@ footer {
         height: auto;
     }
 
-
-    /* Gallery */
-
-
-    /* Testimonials */
-
-
-    /* Contact */
-
+    /* Parallax */
+    #parallax .info article {
+        margin-top: .5rem;
+    }
 }
