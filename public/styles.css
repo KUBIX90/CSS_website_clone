@@ -9,14 +9,8 @@
 
 #container  {overflow: hidden;}
 
-#menu-icon  {display: block;}
-
-.menu-visible {
-    max-height: 300px;
-}
-
-
 .pd-top             {padding-top:6rem;}
+.pd-bottom          {padding-bottom:6rem;}
 .pd-side            {padding: 0 6rem;}
 
 .bg-off-white       {background-color: #f6f6f6;}
@@ -137,10 +131,6 @@
 
 /* --- About Us --- */
 
-#about-us {
-    height:90vh;
-}
-
 .style .title {
     position: relative;
     text-align: center;
@@ -163,10 +153,10 @@
     transition: border-bottom ease-in-out 0.5s;
 }
 
-.style .content {
+#about-us .content {
     display: grid;
     margin-top: 5rem;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
 }
 
 .style .content figure {
@@ -187,13 +177,9 @@
 
 /* --- Our Services --- */
 
-#our-services {
-    height: 90vh;
-}
-
 #our-services section {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(225px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     margin-top: 3.5rem;
 }
 
@@ -291,7 +277,6 @@
     url("images/parallax.jpg") center no-repeat;
     background-size: cover;
     background-attachment: fixed;
-    height: 60vh;
     color: white;
 }
 
@@ -324,10 +309,6 @@
 }
 
 /* --- Testimonials --- */
-
-#testimonials {
-    height: 95vh;
-}
 
 #testimonials .profile {
     text-align: center;
@@ -368,7 +349,6 @@
 /* --- Contact--- */
 
 #contact {
-    height: auto;
     display: flex;
     flex-direction: column;
 }
@@ -376,9 +356,10 @@
 #contact form {
     display: grid;
     justify-content: center;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 350px));
+    width: 80%;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 400px));
     grid-gap: 15px 25px;
-    margin: 3.5rem 0 2rem 0;
+    margin: 3.5rem auto 2rem auto;
 }
 
 #contact form input {
@@ -453,16 +434,19 @@ footer {
 @media only screen and (min-width: 480px) {
     
     /* Nav Menu */
+
     #nav-menu .nav-menu-content nav ul li a:hover {
         color:#cd65b5;
     }
 
     /* Header */
+
     .style .btn:hover {
         background-color: #b73c9b;
     }
 
     /* Gallery */
+
     #gallery .btns button:hover {
         color: white;
         background: #b73c9b;
@@ -477,18 +461,26 @@ footer {
     }
 
     /* Testimonials */
+
     #testimonials .profile section div:hover {
         background-color: #b73c9b;
         border: solid 1px #b73c9b;
     }
 
     /* Contact */
+
     #contact .media-icons ion-icon:hover {
         color: #666;
     }
 }
 
+@media only screen and (max-width: 820px) {
+    .pd-side    {padding: 1rem;}
+}
+
 @media only screen and (max-width: 480px) {
+
+    /* Menu Icon */
 
     #menu-icon {
         display:block;
@@ -505,7 +497,9 @@ footer {
         margin:8px 0;
     }
 
-    .pd-side    {padding: 0;}
+    .menu-visible {
+        max-height: 300px;
+    }
     
     /* Nav Menu */
 
@@ -529,8 +523,6 @@ footer {
 
     /* About Us */
 
-    #about-us {height:auto;}
-
     #about-us .content article p {
         text-align: justify;
     }
@@ -539,17 +531,22 @@ footer {
         height: 150px;
     }
 
-    /* Our Services */
-
-    #our-services {
-        height:auto;
-    }
-    #parallax {
-        height: auto;
-    }
-
     /* Parallax */
+
     #parallax .info article {
         margin-top: .5rem;
+    }
+
+    /* Testimonials */
+
+    #testimonials .profile,
+    #contact form {
+        padding:0 1rem;
+    }
+
+    /* Contact Form */
+    
+    #contact form {
+        width:auto;
     }
 }
