@@ -14,6 +14,7 @@
 .pd-side            {padding: 0 6rem;}
 
 .bg-off-white       {background-color: #f6f6f6;}
+.bg-blck            {background-color: rgba(34, 34, 34, 0.75);}
 
 .icon-pnk           {color: #b73c9b;}
 .icon-size--lrg     {font-size: 6rem;}
@@ -36,7 +37,8 @@
     z-index: 1;
     position: fixed;
     width: 100%;
-    height: 100px;
+    height: 80px;
+    transition: background-color 500ms ease;
 }
 
 #nav-menu .nav-menu-content {
@@ -475,22 +477,20 @@ footer {
     }
 }
 
-@media only screen and (max-width: 720px) {
+@media only screen and (max-width: 780px) {
     
     .pd-side    {padding: 0 1rem;}
-
-}
-
-@media only screen and (max-width: 480px) {
 
     /* Menu Icon */
 
     #menu-icon {
         display:block;
         position: fixed;
-        background:transparent;
+        cursor: pointer;
+        background-color:rgba(34, 34, 34, .75);
         padding: 10px;
         right: 5px;
+        z-index: 10;
     }
 
     #menu-icon > div {
@@ -503,10 +503,10 @@ footer {
     .menu-visible {
         max-height: 300px;
     }
-    
+
     /* Nav Menu */
 
-    #nav-menu   {height: 0;}
+    #nav-menu   {height: auto;}
     
     nav ul      {
         max-height: 0; 
@@ -517,6 +517,10 @@ footer {
     #nav-menu .nav-menu-content nav         {float: left; width: 85%;}
     #nav-menu .nav-menu-content nav ul li   {float: none;}
     #nav-menu .nav-menu-content .logo       {display: none;}
+
+}
+
+@media only screen and (max-width: 480px) {
 
     /* Header */
 
