@@ -8,7 +8,6 @@
 }
 
 #container          {overflow: hidden;}
-
 .pd-top             {padding-top: 6rem;}
 .pd-bottom          {padding-bottom: 6rem;}
 .pd-side            {padding: 0 6rem;}
@@ -313,40 +312,61 @@
 
 /* --- Testimonials --- */
 
-#testimonials .profile {
+#testimonials .profiles {
+    display: flex;
+    justify-content: center;
     text-align: center;
+    overflow: hidden;
+    width: 65%;
     margin: 3.5rem auto 0 auto;
-    max-width: 800px;
 }
 
-#testimonials .profile p {
-    margin-bottom: 1.5rem;
-    color: #666;
+#testimonials .profiles article {
+    min-width:100%;
+    opacity: 0;
+    transition:all 500ms ease-in;
 }
 
-#testimonials .profile p span {
-    font-weight: bold;
+#testimonials .profiles article:nth-child(1) {transform: translateX(100%);}
+#testimonials .profiles article:nth-child(3) {transform: translateX(-100%);}
+
+#testimonials .profiles .profile-active {
+    opacity: 1;
 }
 
-#testimonials .profile img {
+#testimonials .profiles img {
     border-radius: 50%;
     height: 120px;
     width: 120px;
     margin-bottom: 1.5rem;
 }
 
-#testimonials .profile section {
+#testimonials .profiles p {
+    margin-bottom: 1.5rem;
+    color: #666;
+}
+
+#testimonials .profiles p span {
+    font-weight: bold;
+}
+
+#testimonials .indicators {
     display: flex;
     justify-content: center;
 }
 
-#testimonials .profile section div {
+#testimonials .indicators div {
     width: 20px;
     height: 7px;
     margin-right: .5rem;
     border: 1px solid #888;
     transition: all 500ms ease;
     cursor: pointer;
+}
+
+#testimonials .indicators .active {
+    background-color: #b73c9b;
+    border: solid 1px #b73c9b;
 }
 
 /* --- Contact--- */
@@ -465,7 +485,7 @@ footer {
 
     /* Testimonials */
 
-    #testimonials .profile section div:hover {
+    #testimonials .indicators div:hover {
         background-color: #b73c9b;
         border: solid 1px #b73c9b;
     }
