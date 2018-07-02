@@ -421,6 +421,7 @@
     width: 150px;
     align-self: center;
     margin-bottom: 5rem;
+    cursor: pointer;
 }
 
 #contact .media-icons {
@@ -537,6 +538,12 @@ footer {
     #nav-menu .nav-menu-content nav         {float: left; width: 85%;}
     #nav-menu .nav-menu-content nav ul li   {float: none;}
     #nav-menu .nav-menu-content .logo       {display: none;}
+
+    /* --- Testimonials --- */
+
+    #testimonials .profiles {
+        width: 90%;
+    }
 
 }
 
