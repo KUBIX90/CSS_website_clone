@@ -272,6 +272,10 @@
     transform: translateY(-50%);
 }
 
+#gallery .display-none {
+    display: none;
+}
+
 /* --- Parallax --- */
 
 #parallax {

@@ -40,3 +40,52 @@ function changeInfo(n){
     slideIndex = n;
     carousel();
 };
+
+///////////////////////////////////////////////////////////////////////
+
+var all = document.querySelector(".btn-all");
+var images = document.querySelectorAll("#gallery .imgs article");
+var lorem = document.querySelector(".btn-lorem");
+var dolar = document.querySelector(".btn-dolar");
+var ipsum = document.querySelector(".btn-ipsum");
+
+function removeClasses() {
+    for(i = 0; i < images.length; i++){
+            images[i].classList.remove("display-none");
+    }
+};
+
+all.addEventListener("click", function(){
+    for(i = 0; i < images.length; i++){
+        if(images[i].classList.contains("display-none")){
+            images[i].classList.remove("display-none")
+        }
+    }
+});
+
+lorem.addEventListener("click", function(){
+    removeClasses();
+    for(i = 0; i < images.length; i++){
+        if(images[i].classList.contains("dolar") || images[i].classList.contains("ipsum") ){
+            images[i].classList.add("display-none");
+        }
+    }
+});
+
+dolar.addEventListener("click", function(){
+    removeClasses();
+    for(i = 0; i < images.length; i++){
+        if(images[i].classList.contains("lorem") || images[i].classList.contains("ipsum") ){
+            images[i].classList.add("display-none");
+        }
+    }
+});
+
+ipsum.addEventListener("click", function(){
+    removeClasses();
+    for(i = 0; i < images.length; i++){
+        if(images[i].classList.contains("dolar") || images[i].classList.contains("lorem") ){
+            images[i].classList.add("display-none");
+        }
+    }
+});
