@@ -45,47 +45,81 @@ function changeInfo(n){
 
 var all = document.querySelector(".btn-all");
 var images = document.querySelectorAll("#gallery .imgs article");
+var buttons = document.querySelectorAll("#gallery .btns button");
 var lorem = document.querySelector(".btn-lorem");
 var dolar = document.querySelector(".btn-dolar");
 var ipsum = document.querySelector(".btn-ipsum");
 
-function removeClasses() {
+function filterImages(btn, class1, class2){
     for(i = 0; i < images.length; i++){
-            images[i].classList.remove("display-none");
+        btn.classList.add("btn-active");
+        images[i].classList.remove("display-none");
+        if(images[i].classList.contains(class1) || images[i].classList.contains(class2) ){
+            images[i].classList.add("display-none");
+        }
     }
-};
+}
+
+function removeActiveBtn(){
+    for(i = 0; i < buttons.length; i++){
+        buttons[i].classList.remove("btn-active");
+    };
+}
 
 all.addEventListener("click", function(){
+    removeActiveBtn();
     for(i = 0; i < images.length; i++){
+        all.classList.add("btn-active");
         if(images[i].classList.contains("display-none")){
             images[i].classList.remove("display-none")
         }
     }
 });
 
-lorem.addEventListener("click", function(){
-    removeClasses();
-    for(i = 0; i < images.length; i++){
-        if(images[i].classList.contains("dolar") || images[i].classList.contains("ipsum") ){
-            images[i].classList.add("display-none");
-        }
-    }
+lorem.addEventListener("click", function (){
+    removeActiveBtn();
+    filterImages(lorem, "dolar", "ipsum");
 });
 
-dolar.addEventListener("click", function(){
-    removeClasses();
-    for(i = 0; i < images.length; i++){
-        if(images[i].classList.contains("lorem") || images[i].classList.contains("ipsum") ){
-            images[i].classList.add("display-none");
-        }
-    }
+dolar.addEventListener("click", function (){
+    removeActiveBtn();
+    filterImages(dolar, "ipsum", "lorem");
 });
 
-ipsum.addEventListener("click", function(){
-    removeClasses();
-    for(i = 0; i < images.length; i++){
-        if(images[i].classList.contains("dolar") || images[i].classList.contains("lorem") ){
-            images[i].classList.add("display-none");
-        }
+ipsum.addEventListener("click", function (){
+    removeActiveBtn();
+    filterImages(ipsum, "dolar", "lorem");
+});
+
+///////////////////////////////////////////////////////////////////////
+
+var mainImg = document.querySelector(".img-main");
+var allModalImgs = document.querySelectorAll("#modal .modal-content img");
+var modal = document.querySelector("#modal .modal-background");
+var opacity = 0.4;
+
+function resetOpacity(){
+    for(i = 0; i < allModalImgs.length; i++){
+        allModalImgs[i].style.opacity = 1;
     }
+}
+
+for(i = 0; i < images.length; i++){
+    images[i].addEventListener("click", function(){
+        modal.style.display = "flex";
+        mainImg.src = e.target.src;
+        e.target.style.opacity = opacity;
+    });
+};
+
+for(i = 0; i < allModalImgs.length; i++){
+    allModalImgs[i].addEventListener("click", function(e){
+        resetOpacity();
+        mainImg.src = e.target.src;
+        e.target.style.opacity = opacity;
+    });
+};
+
+document.querySelector(".close").addEventListener("click", function(){
+    modal.style.display = "none";
 });

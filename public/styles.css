@@ -235,7 +235,46 @@
     justify-content: center;
 }
 
-#gallery .imgs article {
+#gallery .imgs img {
+    display: block;
+    position: relative;
+    width: 100%;
+    height:100%;
+}
+
+#gallery .imgs section {
+    padding: 0;
+    position: relative;
+    cursor: pointer;
+    transition:all 500ms ease;
+}
+
+#gallery .imgs section div {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    color: white;
+    width:100%;
+    height:100%;
+    opacity: 0;
+    text-align: center;
+    transition: all 500ms ease;
+}
+
+#gallery .imgs section div:hover {
+    opacity: 1;
+    background-color: rgba(0, 0, 0, 0.66);
+}
+
+#gallery .imgs section div p {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/*#gallery .imgs article {
     background-size: cover;
     padding: 0;
     position: relative;
@@ -274,6 +313,76 @@
 
 #gallery .display-none {
     display: none;
+}
+
+/*modals*/
+
+#modal .modal-background {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    z-index:50;
+    background-color: rgba(34, 34, 34, .95);
+}
+
+#modal .modal-content {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-gap: 5px;
+}
+
+#modal .modal-content img {
+    height: 100px;
+    width: 150px;
+    cursor: pointer;
+}
+
+#modal .modal-content .img-main {
+    height: 300px;
+    width: 500px;
+    margin: 0 auto 1rem auto;
+    grid-column: 1 / -1;
+}
+
+
+/*#modal .modal-content div {
+    position:absolute;
+    top:50%;
+    align-items: center;
+    transform:translateY(-50%);
+    color: white;
+    font-size: 4rem;
+    cursor: pointer;
+}
+
+#modal .modal-content .right-arrow {
+    left: 105%;
+}
+
+#modal .modal-content .left-arrow {
+    right: 105%;
+}
+
+*/
+
+#modal .close {
+    position: fixed;
+    top:10px;
+    right: 20px;
+    color: white;
+    font-size: 4rem;
+    font-weight: 300;
+    cursor: pointer;
+    transition: color 500ms ease;
+}
+
+#modal .close:hover {
+    color: #b73c9b;
 }
 
 /* --- Parallax --- */
@@ -480,7 +589,7 @@ footer {
         background: #b73c9b;
     }
 
-    #gallery article:hover {
+    #gallery .imgs section:hover {
         transform: scale(1.1);
     }
 
