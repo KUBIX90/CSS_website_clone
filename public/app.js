@@ -43,9 +43,9 @@ function changeInfo(n){
 
 ///////////////////////////////////////////////////////////////////////
 
-var all = document.querySelector(".btn-all");
-var images = document.querySelectorAll("#gallery .imgs article");
+var images = document.querySelectorAll("#gallery .imgs section");
 var buttons = document.querySelectorAll("#gallery .btns button");
+var all = document.querySelector(".btn-all");
 var lorem = document.querySelector(".btn-lorem");
 var dolar = document.querySelector(".btn-dolar");
 var ipsum = document.querySelector(".btn-ipsum");
