@@ -18,21 +18,21 @@ window.addEventListener("scroll", function () {
 ///////////////////////////////////////////////////////////////////////
 
 var slideIndex = 1;
-var x = document.querySelectorAll(".profiles article");
-var y = document.querySelectorAll(".indicators div");
+var profiles = document.querySelectorAll(".profiles article");
+var indicators = document.querySelectorAll(".indicators div");
 var timeOut = setInterval(carousel, 4000);
 
 function carousel() {
 
-    for (i = 0; i < x.length; i++) {
-        y[i].classList.remove("active");
-        x[i].classList.remove("profile-active");
+    for (i = 0; i < profiles.length; i++) {
+        indicators[i].classList.remove("active");
+        profiles[i].classList.remove("profile-active");
     }
 
-    x[slideIndex].classList.add("profile-active");
-    y[slideIndex].classList.add("active");
+    profiles[slideIndex].classList.add("profile-active");
+    indicators[slideIndex].classList.add("active");
 
-    slideIndex = (slideIndex += 1) % x.length
+    slideIndex = (slideIndex += 1) % profiles.length
 
 }
 
@@ -124,4 +124,8 @@ for (i = 0; i < allModalImgs.length; i++) {
 
 document.querySelector(".close").addEventListener("click", function () {
     modal.style.display = "none";
+});
+
+document.querySelector(".right-arrow").addEventListener("click", function (e) {
+
 });

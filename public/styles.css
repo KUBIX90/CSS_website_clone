@@ -277,6 +277,8 @@
 }
 
 #gallery .imgs section div {
+    display: flex;
+    justify-content: center;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -291,13 +293,9 @@
     transition: all 500ms ease;
 }
 
-#gallery .imgs section div:hover {
-    opacity: 1;
-    background-color: rgba(0, 0, 0, 0.66);
-}
-
 #gallery .imgs section div p {
     position: relative;
+    height: 10%;
     top: 50%;
     transform: translateY(-50%);
 }
@@ -309,7 +307,7 @@
 /*modals */
 
 #modal .modal-background {
-    display: none;
+    display: flex;
     justify-content: center;
     align-items: center;
     position: fixed;
@@ -579,8 +577,9 @@ footer {
     #gallery .imgs section:hover {
         transform: scale(1.1);
     }
-    #gallery article .img-overlay:hover {
+    #gallery .imgs section div:hover {
         opacity: 1;
+        background-color: rgba(0, 0, 0, 0.66);
     }
     /* Testimonials */
     #testimonials .indicators div:hover {
@@ -616,7 +615,38 @@ footer {
     .menu-visible {
         max-height: 300px;
     }
-    /* Nav Menu */
+
+    /* Modal */
+
+    #modal .modal-background .right-arrow,
+    #modal .modal-background .left-arrow {
+        position: fixed;
+        top:80%;
+        font-size: 4rem;
+        font-weight: 300;
+        color: white;
+        text-align: center;
+        border-radius: 50%;
+    }
+
+    #modal .modal-background .right-arrow {
+        left: 10%;
+    }
+    
+    #modal .modal-background .left-arrow {
+        right:10%;
+    }
+
+    #modal .modal-background .modal-content img {
+        display: none;
+    }
+
+    #modal .modal-background .modal-content .img-main {
+        display: block;
+    }
+    
+    /* --- Nav Menu --- */
+
     #nav-menu {
         height: auto;
     }
@@ -658,6 +688,10 @@ footer {
     }
     .style .content figure img {
         height: 150px;
+    }
+    /* Modal */
+    #modal .modal-background .modal-content .img-main {
+        width: 90%;
     }
     /* Parallax */
     #parallax .info article {
