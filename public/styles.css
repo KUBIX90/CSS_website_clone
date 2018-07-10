@@ -336,27 +336,13 @@
     width: 500px;
     margin: 0 auto 1rem auto;
     grid-column: 1 / -1;
+    pointer-events: none;
 }
 
-/*#modal .modal-content div {
-    position:absolute;
-    top:50%;
-    align-items: center;
-    transform:translateY(-50%);
-    color: white;
-    font-size: 4rem;
-    cursor: pointer;
+#modal .modal-background .previous,
+#modal .modal-background .next {
+    display: none;
 }
-
-#modal .modal-content .right-arrow {
-    left: 105%;
-}
-
-#modal .modal-content .left-arrow {
-    right: 105%;
-}
-
-*/
 
 #modal .close {
     position: fixed;
@@ -369,8 +355,20 @@
     transition: color 500ms ease;
 }
 
-#modal .close:hover {
-    color: #b73c9b;
+#modal .modal-content img {
+    height: 100px;
+    width: 150px;
+    cursor: pointer;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 500ms ease forwards;
 }
 
 /* --- Parallax --- */
@@ -581,6 +579,10 @@ footer {
         opacity: 1;
         background-color: rgba(0, 0, 0, 0.66);
     }
+    /* Modal */
+    #modal .close:hover {
+        color: #b73c9b;
+    }
     /* Testimonials */
     #testimonials .indicators div:hover {
         background-color: #b73c9b;
@@ -615,38 +617,26 @@ footer {
     .menu-visible {
         max-height: 300px;
     }
-
     /* Modal */
-
-    #modal .modal-background .right-arrow,
-    #modal .modal-background .left-arrow {
+    #modal .modal-background .next {
+        display: block;
         position: fixed;
-        top:80%;
+        top: 80%;
         font-size: 4rem;
         font-weight: 300;
         color: white;
+        cursor: pointer;
         text-align: center;
         border-radius: 50%;
-    }
-
-    #modal .modal-background .right-arrow {
-        left: 10%;
-    }
-    
-    #modal .modal-background .left-arrow {
-        right:10%;
     }
 
     #modal .modal-background .modal-content img {
         display: none;
     }
-
     #modal .modal-background .modal-content .img-main {
         display: block;
     }
-    
     /* --- Nav Menu --- */
-
     #nav-menu {
         height: auto;
     }

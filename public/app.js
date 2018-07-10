@@ -126,6 +126,12 @@ document.querySelector(".close").addEventListener("click", function () {
     modal.style.display = "none";
 });
 
-document.querySelector(".right-arrow").addEventListener("click", function (e) {
+////////////////////////////////////////////////////////////////////////
 
+var imgIndex = 1;
+
+document.querySelector(".next").addEventListener("click", function () {
+    mainImg.src = allModalImgs[imgIndex].src;
+
+    imgIndex = (imgIndex += 1) % allModalImgs.length
 });
