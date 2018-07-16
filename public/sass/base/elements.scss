@@ -1,0 +1,16 @@
+$padding: 6px;
+nav {
+    ul {
+        margin: 0;
+        padding: $padding;
+        list-style: none;
+    }
+
+    a {
+        display: block;
+        padding: $padding 12px;
+        text-decoration: none;
+        padding: 2rem;
+        color: red;
+    }
+}

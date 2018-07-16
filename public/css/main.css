@@ -1,0 +1,11 @@
+nav ul {
+  margin: 0;
+  padding: 6px;
+  list-style: none; }
+
+nav a {
+  display: block;
+  padding: 6px 12px;
+  text-decoration: none;
+  padding: 2rem;
+  color: red; }
