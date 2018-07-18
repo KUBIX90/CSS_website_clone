@@ -1,0 +1,27 @@
+.nav-menu {
+    display: flex;
+    position: fixed;
+    width: 100%;
+    @include font-white(0.8);
+    background-color: $dark-grey;
+
+    & h1 {
+        margin-left: 4rem; 
+        flex-grow: 1;
+        font-size: 1.5rem;
+    }
+    & nav {
+        display: flex;
+        margin-right: 4rem; 
+        align-items: center;
+    }
+    & a {
+        padding: 0.5rem 1rem;
+        @include font-white(0.8);
+        transition: color 500ms ease;
+
+        &:hover {
+            color: $pink;
+        }
+    }
+}

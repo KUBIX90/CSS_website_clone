@@ -103,7 +103,7 @@
 
 #header {
     display: flex;
-    background: linear-gradient(rgba(27, 113, 214, 0.5), rgba(197, 77, 170, 0.5)), url("../images/header.jpg") center no-repeat;
+    background: linear-gradient(rgba(27, 113, 214, 0.5), rgba(197, 77, 170, 0.5)), url("./public/images/header.jpg") center no-repeat;
     background-size: cover;
     height: 105vh;
 }
@@ -366,6 +366,7 @@
         opacity: 1;
     }
 }
+
 .fade-in {
     opacity: 0;
     animation: fadeIn 500ms ease forwards;
@@ -629,7 +630,6 @@ footer {
         text-align: center;
         border-radius: 50%;
     }
-
     #modal .modal-background .modal-content img {
         display: none;
     }
