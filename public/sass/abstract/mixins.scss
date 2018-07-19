@@ -6,3 +6,17 @@
 
 //============= LAYOUT =============//
 
+
+//============= RESPONSIVENESS =============//
+
+@mixin min-width ($width) {
+    @media only screen and (min-width: $width) {
+        @content
+    }
+}
+
+@mixin max-width ($width) {
+    @media only screen and (max-width: $width) {
+        @content
+    }
+}

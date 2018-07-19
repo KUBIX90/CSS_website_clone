@@ -1,0 +1,19 @@
+#hamburger-menu {
+    display: none;
+    position: fixed;
+    cursor: pointer;
+    background-color: rgba(34, 34, 34, .75);
+    padding: 10px;
+    right: 5px;
+    z-index: 10;
+    @include max-width (500px){
+        display: block;
+    }
+
+    & > div {
+        height: 2px;
+        width: 25px;
+        background-color: white;
+        margin: 8px 0;
+    }
+}

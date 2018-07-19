@@ -12,26 +12,94 @@ li {
 a {
   text-decoration: none; }
 
+#hamburger-menu {
+  display: none;
+  position: fixed;
+  cursor: pointer;
+  background-color: rgba(34, 34, 34, 0.75);
+  padding: 10px;
+  right: 5px;
+  z-index: 10; }
+  @media only screen and (max-width: 500px) {
+    #hamburger-menu {
+      display: block; } }
+  #hamburger-menu > div {
+    height: 2px;
+    width: 25px;
+    background-color: white;
+    margin: 8px 0; }
+
 .nav-menu {
   display: flex;
+  flex-wrap: wrap;
   position: fixed;
+  height: 75px;
   width: 100%;
   color: rgba(255, 255, 255, 0.8);
-  background-color: rgba(34, 34, 34, 0.75); }
+  background-color: transparent; }
   .nav-menu h1 {
-    margin-left: 4rem;
+    margin-left: 6rem;
     flex-grow: 1;
     font-size: 1.5rem; }
+    @media only screen and (max-width: 1000px) {
+      .nav-menu h1 {
+        margin-left: 2rem; } }
   .nav-menu nav {
     display: flex;
-    margin-right: 4rem;
+    margin-right: 6rem;
     align-items: center; }
+    @media only screen and (max-width: 1000px) {
+      .nav-menu nav {
+        margin-right: 2rem; } }
   .nav-menu a {
     padding: 0.5rem 1rem;
     color: rgba(255, 255, 255, 0.8);
     transition: color 500ms ease; }
     .nav-menu a:hover {
       color: #C54DAA; }
+
+.header-info {
+  display: flex;
+  align-items: center;
+  background: linear-gradient(rgba(27, 113, 214, 0.5), rgba(197, 77, 170, 0.5)), url("../../public/images/header.jpg") center no-repeat;
+  background-size: cover;
+  height: 105vh; }
+  .header-info article {
+    width: 40%;
+    position: relative;
+    left: 15%;
+    color: rgba(255, 255, 255, 0.9); }
+    @media only screen and (max-width: 1000px) {
+      .header-info article {
+        width: 60%; } }
+    .header-info article h1 {
+      font-weight: 900;
+      font-size: 3.75rem;
+      letter-spacing: -1px;
+      text-transform: uppercase; }
+    .header-info article p {
+      font-weight: 300;
+      font-size: 1.7rem; }
+    .header-info article .welcome {
+      color: rgba(255, 255, 255, 0.5);
+      margin-bottom: -3.25rem; }
+    .header-info article .description {
+      font-size: 1.4rem;
+      line-height: 1.9rem;
+      margin-top: -1.75rem; }
+
+.btn {
+  background-color: #c54daa;
+  padding: 14px 20px;
+  text-transform: uppercase;
+  font-size: 15px;
+  border: none;
+  border-top: 4px solid #b73c9b;
+  transition: background-color 500ms ease; }
+  .btn--margin-top {
+    margin-top: 2rem; }
+  .btn:hover {
+    background-color: #b73c9b; }
 
 /*! normalize.scss v0.1.0 | MIT License | based on git.io/normalize */
 /**

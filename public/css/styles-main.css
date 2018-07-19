@@ -103,7 +103,7 @@
 
 #header {
     display: flex;
-    background: linear-gradient(rgba(27, 113, 214, 0.5), rgba(197, 77, 170, 0.5)), url("./public/images/header.jpg") center no-repeat;
+    background: linear-gradient(rgba(27, 113, 214, 0.5), rgba(197, 77, 170, 0.5)), url("../public/images/header.jpg") center no-repeat;
     background-size: cover;
     height: 105vh;
 }

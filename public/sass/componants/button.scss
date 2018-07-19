@@ -1,0 +1,17 @@
+.btn {
+    background-color: #c54daa;
+    padding: 14px 20px;
+    text-transform: uppercase;
+    font-size: 15px;
+    border: none;
+    border-top: 4px solid #b73c9b;
+    transition: background-color 500ms ease;
+
+    &--margin-top {
+        margin-top: 2rem;
+    }
+    
+    &:hover {
+        background-color: #b73c9b;
+    }
+}
