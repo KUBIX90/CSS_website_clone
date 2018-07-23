@@ -101,6 +101,34 @@ a {
   .btn:hover {
     background-color: #b73c9b; }
 
+.about-us-layout {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 5rem 6rem; }
+  @media only screen and (max-width: 1150px) {
+    .about-us-layout {
+      padding: 5rem 0rem;
+      flex-direction: column; } }
+  .about-us-layout h1 {
+    flex: 0 0 100%;
+    text-align: center;
+    color: #666;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 2.25rem; }
+  .about-us-layout figure {
+    width: 100%;
+    flex: 1; }
+  .about-us-layout img {
+    display: block;
+    height: 275px;
+    margin: 0 auto; }
+    @media only screen and (max-width: 860px) {
+      .about-us-layout img {
+        height: 150px; } }
+  .about-us-layout article {
+    flex: 1; }
+
 /*! normalize.scss v0.1.0 | MIT License | based on git.io/normalize */
 /**
  * 1. Set default font family to sans-serif.
