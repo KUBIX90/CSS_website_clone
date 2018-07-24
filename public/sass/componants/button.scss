@@ -1,10 +1,10 @@
 .btn {
-    background-color: #c54daa;
+    background-color: $pink;
     padding: 14px 20px;
     text-transform: uppercase;
     font-size: 15px;
     border: none;
-    border-top: 4px solid #b73c9b;
+    border-top: 4px solid $dark-pink;
     transition: background-color 500ms ease;
 
     &--margin-top {
@@ -12,6 +12,27 @@
     }
     
     &:hover {
-        background-color: #b73c9b;
+        background-color: $dark-pink;
+    }
+}
+
+.gallery--btns {
+    display: flex;
+    justify-content: center;
+    margin: 2.5rem 0;
+
+    button {
+        cursor: pointer;
+        margin: .75rem;
+        border: 1px solid $dark-pink;
+        background-color: white;
+        color: $dark-pink;
+        padding: .5rem 1rem;
+        transition: all 250ms ease;
+
+        &:hover {
+            color: white;
+            background: $dark-pink;
+        }
     }
 }

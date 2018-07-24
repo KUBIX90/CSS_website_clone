@@ -2,7 +2,6 @@
     padding: 5rem 6rem;
     @include max-width(1150px) {
         padding: 5rem .75rem;
-        flex-direction: column;
     }
     h1 {
         position: relative;
@@ -14,10 +13,10 @@
         &::after {
             content: "";
             position: absolute;
-            right: 47%;
+            left: calc(50% - 37px);
             bottom: -16px;
             width: 75px;
-            border-bottom: 2px solid #b73c9b;
+            border-bottom: 2px solid $dark-pink;
         }
     }
     h2 {
@@ -25,7 +24,7 @@
         margin-top: 2rem;
         font-size: 1.1rem;
         font-weight: 300;
-        color: #888;
+        color: $grey;
     }
     section {
         display: grid;
@@ -34,7 +33,7 @@
         text-align: center;
 
         figure {
-            margin: 0;
+            margin: 1rem 0 2rem 0;
         }
 
         .icon-services {
