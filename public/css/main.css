@@ -380,6 +380,77 @@ a {
       background-color: #b73c9b;
       border: solid 1px #b73c9b; }
 
+#contact {
+  padding: 5rem 6rem 0 6rem; }
+  #contact h1 {
+    position: relative;
+    text-align: center;
+    color: #888;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 2.25rem; }
+    #contact h1::after {
+      content: "";
+      position: absolute;
+      left: calc(50% - 37px);
+      bottom: -16px;
+      width: 75px;
+      border-bottom: 2px solid #b73c9b; }
+  #contact h2 {
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 1.1rem;
+    font-weight: 300;
+    color: #888; }
+  #contact form {
+    display: grid;
+    position: relative;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 400px));
+    grid-gap: 15px 25px;
+    margin: 3.5rem auto 2rem auto; }
+  #contact input {
+    height: 35px; }
+  #contact .message-area {
+    grid-column: 1 /-1;
+    padding-top: 0.5rem;
+    height: 125px; }
+  #contact input,
+  #contact textarea {
+    border: 1px solid #ccc;
+    padding-left: 10px;
+    color: rgba(34, 34, 34, 0.75);
+    font-size: 0.85rem;
+    font-weight: 300; }
+    #contact input::placeholder,
+    #contact textarea::placeholder {
+      color: rgba(34, 34, 34, 0.75); }
+    #contact input:focus,
+    #contact textarea:focus {
+      border: solid 1px #C54DAA;
+      outline: 0; }
+  #contact .btn--form {
+    color: white;
+    width: 150px;
+    margin: 1.5rem calc(100% - 60px); }
+    @media only screen and (max-width: 1033px) {
+      #contact .btn--form {
+        margin: 1.5rem calc(50% - 75px) 5rem; } }
+  #contact .media-icons {
+    display: grid;
+    grid-template-columns: repeat(4, 85px);
+    justify-content: center;
+    margin-bottom: 5rem; }
+  #contact ion-icon {
+    cursor: pointer;
+    color: #b73c9b;
+    font-size: 2.25rem;
+    margin: 0 auto;
+    transition: color 500ms ease; }
+    @media only screen and (min-width: 780px) {
+      #contact ion-icon:hover {
+        color: #888; } }
+
 /*! normalize.scss v0.1.0 | MIT License | based on git.io/normalize */
 /**
  * 1. Set default font family to sans-serif.
