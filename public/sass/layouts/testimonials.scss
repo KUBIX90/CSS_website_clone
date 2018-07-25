@@ -1,0 +1,92 @@
+#testimonials {
+    background-color: $off-white;
+    padding: 5rem 6rem;
+    @include max-width(1000px){
+        padding: 5rem 1rem;
+    }
+
+    h1 {
+        position: relative;
+        text-align: center;
+        color: $grey;
+        text-transform: uppercase;
+        font-weight: 400;
+        font-size: 2.25rem;
+        &::after {
+            content: "";
+            position: absolute;
+            left: calc(50% - 37px);
+            bottom: -16px;
+            width: 75px;
+            border-bottom: 2px solid $dark-pink;
+        }
+    }
+
+    .profiles {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        overflow: hidden;
+        width: 65%;
+        @include max-width(1000px) {
+            width: 100%;
+        }
+        margin: 3.5rem auto 0 auto;
+    }
+
+    .profile-active {
+        opacity: 1;
+    }
+
+    article {
+        min-width: 100%;
+        opacity: 0;
+        transition: all 500ms ease-in;
+
+        &:nth-child(1){
+            transform: translateX(100%);
+        }
+
+        &:nth-child(3){
+            transform: translateX(-100%);
+        }
+    }
+
+    img {
+        border-radius: 50%;
+        height: 120px;
+        width: 120px;
+        margin-bottom: 1.5rem;
+    }
+
+    p {
+        line-height: 22px;
+        font-weight: 300;
+        color: $grey;
+        font-size: 0.95rem;
+        margin-bottom: 1.5rem;
+    }
+
+    span {
+        font-weight: bold;
+    }
+
+    .indicators {
+        display: flex;
+        justify-content: center;
+
+        div {
+            cursor: pointer;
+            width: 20px;
+            height: 7px;
+            margin-right: .5rem;
+            border: 1px solid $grey;
+            transition: all 500ms ease;
+        }
+
+        .active {
+            background-color: $dark-pink;
+            border: solid 1px $dark-pink;
+        }
+    }
+}
