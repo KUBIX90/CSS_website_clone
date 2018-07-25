@@ -6,13 +6,15 @@
     border: none;
     border-top: 4px solid $dark-pink;
     transition: background-color 500ms ease;
-
+    
     &--margin-top {
         margin-top: 2rem;
     }
     
-    &:hover {
-        background-color: $dark-pink;
+    @include min-width(780px) {
+        &:hover {
+            background-color: $dark-pink;
+        }
     }
 }
 
@@ -20,7 +22,7 @@
     display: flex;
     justify-content: center;
     margin: 2.5rem 0;
-
+    
     button {
         cursor: pointer;
         margin: .75rem;
@@ -29,10 +31,11 @@
         color: $dark-pink;
         padding: .5rem 1rem;
         transition: all 250ms ease;
-
-        &:hover {
-            color: white;
-            background: $dark-pink;
+        @include min-width (780px) {
+            &:hover {
+                color: white;
+                background: $dark-pink;
+            }
         }
     }
 }

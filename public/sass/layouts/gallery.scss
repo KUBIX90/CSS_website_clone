@@ -38,8 +38,10 @@
             padding: 0;
             position: relative;
             transition: all 500ms ease;
-            &:hover {
-                transform: scale(1.1);
+            @include min-width(780px) {
+                &:hover {
+                    transform: scale(1.1);
+                }
             }
         }
         img {
@@ -63,9 +65,11 @@
             text-align: center;
             pointer-events: painted;
             transition: all 500ms ease;
-            &:hover {
-                opacity: 1;
-                background-color: rgba(0, 0, 0, 0.66);
+            @include min-width (780px) {
+                &:hover {
+                    opacity: 1;
+                    background-color: rgba(0, 0, 0, 0.66);
+                }
             }
         }
         p {
