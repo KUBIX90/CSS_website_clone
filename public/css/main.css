@@ -40,6 +40,9 @@ a {
     @media only screen and (max-width: 1000px) {
       .nav-menu h1 {
         margin-left: 2rem; } }
+    @media only screen and (max-width: 450px) {
+      .nav-menu h1 {
+        display: none; } }
   .nav-menu nav {
     display: flex;
     margin-right: 6rem;
@@ -47,12 +50,23 @@ a {
     @media only screen and (max-width: 1000px) {
       .nav-menu nav {
         margin-right: 2rem; } }
+    @media only screen and (max-width: 450px) {
+      .nav-menu nav {
+        flex-direction: column;
+        min-width: 100%;
+        max-height: 0;
+        overflow: hidden; } }
   .nav-menu a {
     padding: 0.5rem 1rem;
     color: rgba(255, 255, 255, 0.8);
     transition: color 500ms ease; }
-    .nav-menu a:hover {
-      color: #C54DAA; }
+    @media only screen and (min-width: 780px) {
+      .nav-menu a:hover {
+        color: #C54DAA; } }
+    @media only screen and (max-width: 450px) {
+      .nav-menu a {
+        min-width: 100%;
+        padding-left: 2rem; } }
 
 .header-info {
   display: flex;
@@ -68,6 +82,10 @@ a {
     @media only screen and (max-width: 1000px) {
       .header-info article {
         width: 60%; } }
+    @media only screen and (max-width: 450px) {
+      .header-info article {
+        width: 90%;
+        left: 5%; } }
     .header-info article h1 {
       font-weight: 900;
       font-size: 3.75rem;
@@ -450,6 +468,19 @@ a {
     @media only screen and (min-width: 780px) {
       #contact ion-icon:hover {
         color: #888; } }
+
+.footer-layout {
+  display: flex;
+  height: 12vh;
+  background: linear-gradient(to right, #c54daa, #1b71d6);
+  justify-content: center;
+  align-items: center;
+  color: #f6f6f6;
+  font-weight: 300;
+  font-size: 0.9rem; }
+  @media only screen and (max-width: 400px) {
+    .footer-layout {
+      font-size: .75rem; } }
 
 /*! normalize.scss v0.1.0 | MIT License | based on git.io/normalize */
 /**

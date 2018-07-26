@@ -1,0 +1,13 @@
+.footer-layout {
+    display: flex;
+    height: 12vh;
+    background: linear-gradient(to right, rgb(197, 77, 170), rgb(27, 113, 214));
+    justify-content: center;
+    align-items: center;
+    color: $off-white;
+    font-weight: 300;
+    font-size: 0.9rem;
+    @include max-width (400px) {
+        font-size: .75rem;
+    }
+}
