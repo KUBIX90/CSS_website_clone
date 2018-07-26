@@ -1,5 +1,5 @@
 // All element tags (header,section etc) are set to display: block via normalize.css.
-// Use a class to override this if needed, this ahs been done for the header below.
+// Use a class to override this if needed, this has been done for the header below.
 
 .header-info {
     display: flex;
@@ -19,6 +19,7 @@
         }
         @include max-width (450px) {
             width:90%;
+            top:5%;
             left: 5%;
         }
 

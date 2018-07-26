@@ -1,7 +1,13 @@
-document.querySelector("#menu-icon").addEventListener("click", function () {
-    document.querySelector("#nav-menu nav ul").classList.toggle("menu-visible");
+////////// TOGGLE MOBILE MENU //////////
+
+var hamburgerMenu = document.querySelector("#hamburger-menu");
+var nav = document.querySelector(".nav-menu nav");
+
+hamburgerMenu.addEventListener("click", function () {
+    nav.classList.toggle("menu-visible");
 });
 
+/*
 ///////////////////////////////////////////////////////////////////////
 
 var nav = document.querySelector("#nav-menu");
@@ -135,3 +141,4 @@ document.querySelector(".next").addEventListener("click", function () {
 
     imgIndex = (imgIndex += 1) % allModalImgs.length
 });
+*/

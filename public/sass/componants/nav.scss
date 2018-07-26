@@ -2,10 +2,13 @@
     display: flex;
     flex-wrap: wrap;
     position: fixed;
-    height: 75px;
     width: 100%;
     @include font-white(0.8);
     background-color: transparent;
+
+    .menu-visible {
+        max-height: 300px;
+    }
 
     & h1 {
         margin-left: 6rem;

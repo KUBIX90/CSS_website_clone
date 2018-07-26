@@ -1,5 +1,8 @@
 #contact {
     padding: 5rem 6rem 0 6rem;
+    @include max-width (450px) {
+        padding: 5rem 0.5rem 0 0.5rem;
+    }
     h1 {
         position: relative;
         text-align: center;
