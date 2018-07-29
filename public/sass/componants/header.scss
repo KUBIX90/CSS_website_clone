@@ -1,45 +1,38 @@
 // All element tags (header,section etc) are set to display: block via normalize.css.
 // Use a class to override this if needed, this has been done for the header below.
-
 .header-info {
     display: flex;
     align-items: center;
     background: linear-gradient($blue-tint, $pink-tint), url("../../public/images/header.jpg") center no-repeat;
     background-size: cover;
     height: 105vh;
-    
     & article {
         width: 40%;
         position: relative;
         left: 15%;
         @include font-white(0.9);
-
         @include max-width (1000px) {
-            width:60%;
+            width: 60%;
         }
         @include max-width (450px) {
-            width:90%;
-            top:5%;
+            width: 90%;
+            top: 5%;
             left: 5%;
         }
-
         & h1 {
             font-weight: 900;
             font-size: 3.75rem;
             letter-spacing: -1px;
             text-transform: uppercase;
         }
-
         & p {
             font-weight: 300;
             font-size: 1.7rem;
         }
-
         & .welcome {
             @include font-white(0.5);
             margin-bottom: -3.25rem;
         }
-
         & .description {
             font-size: 1.4rem;
             line-height: 1.9rem;
