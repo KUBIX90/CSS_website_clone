@@ -54,11 +54,25 @@
 .modal-btns {
     display: none;
     @include max-width (950px) {
-        display: flex;
-        justify-content: center;
+        display:block;
+        text-align: center;
     }
 
     button {
-        color: red;
+        background-color: transparent;
+        height: 100px;
+        width: 100px;
+        border-radius: 50%;
+        border: 1px white solid;
+        font-size: 4rem;
+        font-weight: 300;
+        color: white;
+
+        &:nth-child(1) {
+            margin-right: 3rem;
+        }
+        &:nth-child(2) {
+            margin-left: 3rem;
+        }
     }
 }

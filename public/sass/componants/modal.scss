@@ -13,6 +13,7 @@
 
     .img-main {
         display: block;
+        position: relative;
         height: 300px;
         width: 500px;
         margin: 2rem auto;
@@ -20,6 +21,11 @@
             height: 360px;
             width: 600px;
             margin: 5rem auto 3rem auto;
+        }
+        @include max-width (600px) {
+            height: 182px;
+            width: 302px;
+            margin-top: 10rem;
         }
     }
 

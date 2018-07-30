@@ -151,10 +151,21 @@ a {
   display: none; }
   @media only screen and (max-width: 950px) {
     .modal-btns {
-      display: flex;
-      justify-content: center; } }
+      display: block;
+      text-align: center; } }
   .modal-btns button {
-    color: red; }
+    background-color: transparent;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    border: 1px white solid;
+    font-size: 4rem;
+    font-weight: 300;
+    color: white; }
+    .modal-btns button:nth-child(1) {
+      margin-right: 3rem; }
+    .modal-btns button:nth-child(2) {
+      margin-left: 3rem; }
 
 .modal-background {
   position: fixed;
@@ -168,6 +179,7 @@ a {
     margin: 0; }
   .modal-background .img-main {
     display: block;
+    position: relative;
     height: 300px;
     width: 500px;
     margin: 2rem auto; }
@@ -176,6 +188,11 @@ a {
         height: 360px;
         width: 600px;
         margin: 5rem auto 3rem auto; } }
+    @media only screen and (max-width: 600px) {
+      .modal-background .img-main {
+        height: 182px;
+        width: 302px;
+        margin-top: 10rem; } }
   .modal-background .modal-gallery {
     display: grid;
     justify-content: center;
