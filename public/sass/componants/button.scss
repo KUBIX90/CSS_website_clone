@@ -16,10 +16,20 @@
     }
 }
 
+.btn-active {
+    background-color: $dark-pink;
+}
+
 .gallery--btns {
     display: flex;
     justify-content: center;
     margin: 2.5rem 0;
+
+    .btn-active {
+        color: white;
+        background-color: $dark-pink;
+    }
+
     button {
         cursor: pointer;
         margin: .75rem;

@@ -1,57 +1,58 @@
+// nav-menu adds bg class on scroll //
+
+.bg-grey {
+    background-color: $dark-grey;
+}
+
 .nav-menu {
     display: flex;
     flex-wrap: wrap;
     position: fixed;
+    z-index: 10;
     width: 100%;
+    transition: background-color 500ms ease;
     @include font-white(0.8);
-    background-color: transparent;
 
     .menu-visible {
         max-height: 300px;
     }
 
-    & h1 {
+    h1 {
         margin-left: 6rem;
         flex-grow: 1;
         font-size: 1.5rem;
-
         @include max-width (1000px) {
             margin-left: 2rem;
         }
-
-        @include max-width (450px) {
+        @include max-width (660px) {
             display: none;
         }
     }
-
-    & nav {
+    
+    nav {
         display: flex;
         margin-right: 6rem;
         align-items: center;
-
         @include max-width (1000px) {
             margin-right: 2rem;
         }
-
-        @include max-width (450px) {
+        @include max-width (660px) {
             flex-direction: column;
             min-width: 100%;
             max-height: 0;
             overflow: hidden;
         }
     }
-
-    & a {
+    
+    a {
         padding: 0.5rem 1rem;
         @include font-white(0.8);
         transition: color 500ms ease;
-
         @include min-width (780px) {
             &:hover {
                 color: $pink;
             }
         }
-
         @include max-width (450px) {
             min-width: 100%;
             padding-left: 2rem;

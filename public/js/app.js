@@ -7,21 +7,23 @@ hamburgerMenu.addEventListener("click", function () {
     nav.classList.toggle("menu-visible");
 });
 
-/*
-///////////////////////////////////////////////////////////////////////
 
-var nav = document.querySelector("#nav-menu");
+////////// TOGGLE BACKGROUND ON SCROLL //////////
+
+var nav = document.querySelector(".nav-menu");
+var header = document.querySelector(".header-info");
 
 window.addEventListener("scroll", function () {
 
-    if (window.pageYOffset > 600) {
-        nav.classList.add("bg-blck");
+    if (window.pageYOffset > header.clientHeight - 50) {
+        nav.classList.add("bg-grey");
     } else {
-        nav.classList.remove("bg-blck");
+        nav.classList.remove("bg-grey");
     }
 });
 
-///////////////////////////////////////////////////////////////////////
+
+////////// MOVING THE CAROUSEL EVERY INTERVAL //////////
 
 var slideIndex = 1;
 var profiles = document.querySelectorAll(".profiles article");
@@ -47,11 +49,10 @@ function changeInfo(n) {
     carousel();
 };
 
-///////////////////////////////////////////////////////////////////////
+////////// FILTER IMAGES WHEN CLICKING GALLERY BUTTON //////////
 
-var imgOverlays = document.querySelectorAll(".imgs section div");
-var images = document.querySelectorAll("#gallery .imgs section");
-var buttons = document.querySelectorAll("#gallery .btns button");
+var images = document.querySelectorAll(".imgs section");
+var buttons = document.querySelectorAll(".gallery--btns button");
 var all = document.querySelector(".btn-all");
 var lorem = document.querySelector(".btn-lorem");
 var dolar = document.querySelector(".btn-dolar");
@@ -98,20 +99,13 @@ ipsum.addEventListener("click", function () {
     filterImages(ipsum, "dolar", "lorem");
 });
 
-document.querySelector("#gallery .imgs").addEventListener("click", function (e) {
-    for (i = 0; i < imgOverlays.length; i++) {
-        if (e.target == imgOverlays[i]) {
-            modal.style.display = "flex";
-            mainImg.src = e.target.previousElementSibling.src;
-        }
-    }
-});
+////// TOGGLE IMAGE GALLERY MODAL ON CLICK //////
 
-///////////////////////////////////////////////////////////////////////
-
-var mainImg = document.querySelector("#modal .modal-content .img-main");
-var allModalImgs = document.querySelectorAll("#modal .modal-content img");
-var modal = document.querySelector("#modal .modal-background");
+var imgOverlays = document.querySelectorAll(".imgs section div");
+var mainImg = document.querySelector(".img-main");
+var allModalImgs = document.querySelectorAll(".modal-gallery img");
+var modal = document.querySelector(".modal-background");
+var closeBtn = document.querySelector(".close-btn");
 var opacity = 0.4;
 
 function resetOpacity() {
@@ -119,6 +113,15 @@ function resetOpacity() {
         allModalImgs[i].style.opacity = 1;
     }
 }
+
+document.querySelector("#gallery .imgs").addEventListener("click", function (e) {
+    for (i = 0; i < imgOverlays.length; i++) {
+        if (e.target == imgOverlays[i]) {
+            modal.style.display = "block";
+            mainImg.src = e.target.previousElementSibling.src;
+        }
+    }
+});
 
 for (i = 0; i < allModalImgs.length; i++) {
     allModalImgs[i].addEventListener("click", function (e) {
@@ -128,17 +131,20 @@ for (i = 0; i < allModalImgs.length; i++) {
     });
 };
 
-document.querySelector(".close").addEventListener("click", function () {
+closeBtn.addEventListener("click", function () {
+    resetOpacity();
     modal.style.display = "none";
 });
 
-////////////////////////////////////////////////////////////////////////
+////// CLICK THROUGH GALLERY WITH RESPONSIVE BUTTONS //////
 
-var imgIndex = 1;
+prevBtn = document.querySelector(".prev-btn");
+nextBtn = document.querySelector(".next-btn");
 
-document.querySelector(".next").addEventListener("click", function () {
-    mainImg.src = allModalImgs[imgIndex].src;
+var currentImg = 1;
 
-    imgIndex = (imgIndex += 1) % allModalImgs.length
+nextBtn.addEventListener("click", function () {
+    mainImg.src = allModalImgs[currentImg].src;
+
+    currentImg = (currentImg += 1) % allModalImgs.length
 });
-*/

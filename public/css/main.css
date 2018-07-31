@@ -16,7 +16,7 @@ a {
   padding: 10px;
   right: 5px;
   z-index: 10; }
-  @media only screen and (max-width: 500px) {
+  @media only screen and (max-width: 660px) {
     #hamburger-menu {
       display: block; } }
   #hamburger-menu > div {
@@ -25,13 +25,17 @@ a {
     background-color: white;
     margin: 8px 0; }
 
+.bg-grey {
+  background-color: rgba(34, 34, 34, 0.75); }
+
 .nav-menu {
   display: flex;
   flex-wrap: wrap;
   position: fixed;
+  z-index: 10;
   width: 100%;
-  color: rgba(255, 255, 255, 0.8);
-  background-color: transparent; }
+  transition: background-color 500ms ease;
+  color: rgba(255, 255, 255, 0.8); }
   .nav-menu .menu-visible {
     max-height: 300px; }
   .nav-menu h1 {
@@ -41,7 +45,7 @@ a {
     @media only screen and (max-width: 1000px) {
       .nav-menu h1 {
         margin-left: 2rem; } }
-    @media only screen and (max-width: 450px) {
+    @media only screen and (max-width: 660px) {
       .nav-menu h1 {
         display: none; } }
   .nav-menu nav {
@@ -51,7 +55,7 @@ a {
     @media only screen and (max-width: 1000px) {
       .nav-menu nav {
         margin-right: 2rem; } }
-    @media only screen and (max-width: 450px) {
+    @media only screen and (max-width: 660px) {
       .nav-menu nav {
         flex-direction: column;
         min-width: 100%;
@@ -118,10 +122,16 @@ a {
     .btn:hover {
       background-color: #b73c9b; } }
 
+.btn-active {
+  background-color: #b73c9b; }
+
 .gallery--btns {
   display: flex;
   justify-content: center;
   margin: 2.5rem 0; }
+  .gallery--btns .btn-active {
+    color: white;
+    background-color: #b73c9b; }
   .gallery--btns button {
     cursor: pointer;
     margin: .75rem;
@@ -168,6 +178,7 @@ a {
       margin-left: 3rem; }
 
 .modal-background {
+  display: none;
   position: fixed;
   top: 0;
   left: 0;
@@ -182,7 +193,8 @@ a {
     position: relative;
     height: 300px;
     width: 500px;
-    margin: 2rem auto; }
+    margin: 2rem auto;
+    pointer-events: none; }
     @media only screen and (max-width: 950px) {
       .modal-background .img-main {
         height: 360px;
@@ -301,6 +313,9 @@ a {
       font-weight: 300;
       color: #888;
       font-size: .95rem; }
+
+.display-none {
+  display: none; }
 
 #gallery {
   background-color: #f6f6f6;
