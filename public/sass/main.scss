@@ -1,12 +1,29 @@
 //IMPORT ALL SASS DIRECTORIES
+
+/* BASE - Standard styling for elements
+========================================================================== */
+
 @import 'base/elements';
+
+/* ABSTRACT - Variable file along with starting point Mixins and Placeholders.
+========================================================================== */
+
 @import 'abstract/variables';
 @import 'abstract/mixins';
+
+
+/* COMPONANTS - Re-usable site snippets.
+========================================================================== */ 
+
 @import 'componants/hamburger-menu';
 @import 'componants/nav';
 @import 'componants/header';
 @import 'componants/button';
 @import 'componants/modal';
+
+/* LAYOUTS - Section structure and layouts
+========================================================================== */
+
 @import 'layouts/about-us';
 @import 'layouts/our-services';
 @import 'layouts/gallery';
@@ -14,4 +31,9 @@
 @import 'layouts/testimonials';
 @import 'layouts/contact';
 @import 'layouts/footer';
+
+
+/* VENDOR - Default fall-backs and external files.
+========================================================================== */
+
 @import 'vendor/normalize';
