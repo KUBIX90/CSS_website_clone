@@ -6,13 +6,14 @@
     border: none;
     border-top: 4px solid $dark-pink;
     transition: background-color 500ms ease;
-    &--margin-top {
-        margin-top: 2rem;
-    }
     @include min-width(780px) {
         &:hover {
             background-color: $dark-pink;
         }
+    }
+
+    &--margin-top {
+        margin-top: 2rem;
     }
 }
 
@@ -56,6 +57,7 @@
     font-size: 4rem;
     font-weight: 300;
     transition: color 500ms ease;
+    
     &:hover {
         color: $dark-pink;
     }

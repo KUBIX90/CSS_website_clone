@@ -21,7 +21,7 @@ a {
   background-color: rgba(34, 34, 34, 0.75);
   padding: 10px;
   right: 5px;
-  z-index: 10; }
+  z-index: 20; }
   @media only screen and (max-width: 660px) {
     #hamburger-menu {
       display: block; } }
@@ -74,7 +74,7 @@ a {
     @media only screen and (min-width: 780px) {
       .nav-menu a:hover {
         color: #C54DAA; } }
-    @media only screen and (max-width: 450px) {
+    @media only screen and (max-width: 660px) {
       .nav-menu a {
         min-width: 100%;
         padding-left: 2rem; } }
@@ -122,11 +122,11 @@ a {
   border: none;
   border-top: 4px solid #b73c9b;
   transition: background-color 500ms ease; }
-  .btn--margin-top {
-    margin-top: 2rem; }
   @media only screen and (min-width: 780px) {
     .btn:hover {
       background-color: #b73c9b; } }
+  .btn--margin-top {
+    margin-top: 2rem; }
 
 .btn-active {
   background-color: #b73c9b; }

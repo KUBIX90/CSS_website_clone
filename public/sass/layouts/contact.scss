@@ -3,6 +3,7 @@
     @include max-width (450px) {
         padding: 5rem 0.5rem 0 0.5rem;
     }
+
     h1 {
         position: relative;
         text-align: center;
@@ -19,6 +20,7 @@
             border-bottom: 2px solid $dark-pink;
         }
     }
+
     h2 {
         text-align: center;
         margin-top: 2rem;
@@ -26,6 +28,7 @@
         font-weight: 300;
         color: $grey;
     }
+
     form {
         display: grid;
         position: relative;
@@ -34,14 +37,17 @@
         grid-gap: 15px 25px;
         margin: 3.5rem auto 2rem auto;
     }
+
     input {
         height: 35px;
     }
+
     .message-area {
         grid-column: 1 /-1;
         padding-top: 0.5rem;
         height: 125px;
     }
+
     input,
     textarea {
         border: 1px solid #ccc;
@@ -49,14 +55,17 @@
         color: $dark-grey;
         font-size: 0.85rem;
         font-weight: 300;
+
         &::placeholder {
             color: $dark-grey;
         }
+
         &:focus {
             border: solid 1px $pink;
             outline: 0;
         }
     }
+
     .btn--form {
         color: white;
         width: 150px;
@@ -65,12 +74,14 @@
             margin: 1.5rem calc(50% - 75px) 5rem;
         }
     }
+
     .media-icons {
         display: grid;
         grid-template-columns: repeat(4, 85px);
         justify-content: center;
         margin-bottom: 5rem;
     }
+    
     ion-icon {
         cursor: pointer;
         color: $dark-pink;

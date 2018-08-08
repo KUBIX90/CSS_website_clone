@@ -1,10 +1,10 @@
 ////////// TOGGLE MOBILE MENU //////////
 
 var hamburgerMenu = document.querySelector("#hamburger-menu");
-var nav = document.querySelector(".nav-menu nav");
+var menuNav = document.querySelector(".nav-menu nav");
 
 hamburgerMenu.addEventListener("click", function () {
-  nav.classList.toggle("menu-visible");
+  menuNav.classList.toggle("menu-visible");
 });
 
 ////////// TOGGLE BACKGROUND ON SCROLL //////////
@@ -121,9 +121,9 @@ function resetOpacity() {
   }
 }
 
-document.querySelector("#gallery .imgs").addEventListener("click", function(e) {
+document.querySelector("#gallery .imgs").addEventListener("click", function (e) {
   for (i = 0; i < galleryImgOverlays.length; i++) {
-    if(e.target == galleryImgOverlays[i]) {
+    if (e.target == galleryImgOverlays[i]) {
       resetOpacity();
       modalContainer.style.display = "block";
       imgIndex = parseInt(e.target.dataset.index);
@@ -133,26 +133,28 @@ document.querySelector("#gallery .imgs").addEventListener("click", function(e) {
 })
 
 for (i = 0; i < allModalImgs.length; i++) {
-  allModalImgs[i].addEventListener("click", function(e) {
+  allModalImgs[i].addEventListener("click", function (e) {
     resetOpacity();
     modalMainImg.src = e.target.src;
     e.target.style.opacity = opacity;
   });
 }
 
-modalClose.addEventListener("click", function() {
+modalClose.addEventListener("click", function () {
   modalContainer.style.display = "none";
 });
 
 ////// CLICK THROUGH GALLERY WITH RESPONSIVE BUTTONS //////
 
-modalImgNext.addEventListener("click", function(){
+modalImgNext.addEventListener("click", function () {
   imgIndex = (imgIndex += 1) % modalImgsSrc.length;
   modalMainImg.src = modalImgsSrc[imgIndex];
 });
 
-modalImgPrev.addEventListener("click", function(){
+modalImgPrev.addEventListener("click", function () {
   imgIndex = (imgIndex -= 1);
-  if(imgIndex < 0) {imgIndex = modalImgsSrc.length-1;}
+  if (imgIndex < 0) {
+    imgIndex = modalImgsSrc.length - 1;
+  }
   modalMainImg.src = modalImgsSrc[imgIndex];
 });

@@ -1,5 +1,4 @@
 // nav-menu adds bg class on scroll //
-
 .bg-grey {
     background-color: $dark-grey;
 }
@@ -28,7 +27,7 @@
             display: none;
         }
     }
-    
+
     nav {
         display: flex;
         margin-right: 6rem;
@@ -53,7 +52,7 @@
                 color: $pink;
             }
         }
-        @include max-width (450px) {
+        @include max-width (660px) {
             min-width: 100%;
             padding-left: 2rem;
         }

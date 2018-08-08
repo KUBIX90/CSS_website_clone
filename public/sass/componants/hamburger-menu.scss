@@ -5,7 +5,7 @@
     background-color: rgba(34, 34, 34, .75);
     padding: 10px;
     right: 5px;
-    z-index: 10;
+    z-index: 20;
     @include max-width (660px){
         display: block;
     }

@@ -6,7 +6,8 @@
     background: linear-gradient($blue-tint, $pink-tint), url("../../public/images/header.jpg") center no-repeat;
     background-size: cover;
     height: 105vh;
-    & article {
+
+    article {
         width: 40%;
         position: relative;
         left: 15%;
@@ -19,21 +20,25 @@
             top: 5%;
             left: 5%;
         }
-        & h1 {
+        
+        h1 {
             font-weight: 900;
             font-size: 3.75rem;
             letter-spacing: -1px;
             text-transform: uppercase;
         }
-        & p {
+        
+        p {
             font-weight: 300;
             font-size: 1.7rem;
         }
-        & .welcome {
+        
+        .welcome {
             @include font-white(0.5);
             margin-bottom: -3.25rem;
         }
-        & .description {
+        
+        .description {
             font-size: 1.4rem;
             line-height: 1.9rem;
             margin-top: -1.75rem;
