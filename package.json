@@ -9,6 +9,7 @@
     "normalize.scss": "^0.1.0"
   },
   "devDependencies": {
+    "gulp-clean-css": "^3.10.0",
     "gulp-plumber": "^1.2.0",
     "gulp-sass": "^4.0.1"
   },
